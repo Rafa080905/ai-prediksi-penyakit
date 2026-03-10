@@ -9,7 +9,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
-st.set_page_config(page_title="HealthGuard", layout="wide")
+st.set_page_config(
+    page_title="HealthGuard",
+    page_icon="nurse.png",
+    layout="wide"
+)
 
 # =============================
 # SESSION STATE
@@ -362,4 +366,5 @@ elif menu == "Prediksi Jantung":
         if pred_dt[0] == 1:
             st.error("⚠ Terindikasi Penyakit Jantung")
         else:
+
             st.success("✅ Tidak Ada Indikasi")
