@@ -178,11 +178,13 @@ if menu == "Home":
         with col1:
             if st.button("🩸 Informasi Diabetes",use_container_width=True):
                 st.session_state.page = "diabetes_info"
-
+                st.rerun()
+                
         with col2:
             if st.button("❤️ Informasi Penyakit Jantung",use_container_width=True):
                 st.session_state.page = "heart_info"
-
+                st.rerun()
+                
     if st.session_state.page == "diabetes_info":
 
         st.title("🩸 Informasi Lengkap Diabetes")
@@ -368,3 +370,4 @@ elif menu == "Prediksi Jantung":
         else:
 
             st.success("✅ Tidak Ada Indikasi")
+
