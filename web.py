@@ -218,6 +218,7 @@ Diabetes adalah penyakit kronis yang terjadi ketika kadar gula darah terlalu tin
         """)
         if st.button("⬅ Kembali ke Home"):
             st.session_state.page = "home"
+            st.rerun()
 
     if st.session_state.page == "heart_info":
 
@@ -253,6 +254,7 @@ Penyakit jantung adalah kondisi yang mempengaruhi fungsi jantung dan pembuluh da
 
         if st.button("⬅ Kembali ke Home"):
             st.session_state.page = "home"
+            st.rerun()
 
 # =============================
 # PREDIKSI DIABETES
@@ -370,4 +372,5 @@ elif menu == "Prediksi Jantung":
         else:
 
             st.success("✅ Tidak Ada Indikasi")
+
 
