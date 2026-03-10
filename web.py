@@ -9,6 +9,17 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
+st.write("")  
+st.write("")  
+st.write("")  
+st.write("")  
+st.write("") 
+
+col1, col2, col3 = st.columns([2,3,2])
+with col2:
+    with st.spinner("🔍 Memuat sistem HealthGuard..."):
+        time.sleep(1)
+        
 st.set_page_config(
     page_title="HealthGuard",
     page_icon="nurse.png",
@@ -372,5 +383,6 @@ elif menu == "Prediksi Jantung":
         else:
 
             st.success("✅ Tidak Ada Indikasi")
+
 
 
