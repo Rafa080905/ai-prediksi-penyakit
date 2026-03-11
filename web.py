@@ -60,6 +60,7 @@ text-align:center;
 font-size:65px;
 font-weight:900;
 color:#ff4b8b;
+margin-bottom:5px;
 }
 
 .subtitle{
@@ -83,6 +84,11 @@ transition:0.3s;
 .card:hover{
 transform:translateY(-10px);
 box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.block-container{
+padding-top:1rem;
+padding-bottom:0rem;
 }
 
 </style>
@@ -175,11 +181,10 @@ if menu == "Home":
 
         logo = "nurse.png"
 
-        col1,col2,col3 = st.columns([2,3,2])
+        col1, col2, col3, col4, col5 = st.columns([1,2,2,2,1])
 
-        with col2:
-            if os.path.exists(logo):
-                st.image(logo,width="stretch")
+        with col3:
+            st.image(logo, width=450)
 
         st.write("")
         st.write("")
@@ -383,6 +388,7 @@ elif menu == "Prediksi Jantung":
         else:
 
             st.success("✅ Tidak Ada Indikasi")
+
 
 
 
